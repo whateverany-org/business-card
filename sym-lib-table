@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name business-card-rescue)(type Legacy)(uri ${KIPRJMOD}/business-card-rescue.lib)(options "")(descr ""))
+)
