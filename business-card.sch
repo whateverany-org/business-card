@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:business-card-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -1050,7 +1049,7 @@ Wire Wire Line
 	9900 1250 9925 1250
 Connection ~ 9925 1250
 $Comp
-L Device:Crystal_GND24_Small Y1
+L business-card-rescue:Crystal_GND24_Small-Device Y1
 U 1 1 5FCAB95B
 P 10050 1250
 F 0 "Y1" V 10350 1400 50  0000 R CNN
