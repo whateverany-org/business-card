@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:business-card-cache
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -36,17 +37,6 @@ F 1 "Conn_02x04_Counter_Clockwise" H 1200 7526 50  0000 C CNN
 F 2 "footprints:SOIC_clipProgSmall" H 1150 7300 50  0001 C CNN
 F 3 "~" H 1150 7300 50  0001 C CNN
 	1    1150 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L business-card-rescue:F1C100s-3340_kicad-business-card-rescue U7
-U 1 1 5FC1F3CA
-P 7050 3250
-F 0 "U7" H 7100 5415 50  0000 C CNN
-F 1 "F1C100s" H 7100 5324 50  0000 C CNN
-F 2 "footprints:QFN-88_EP_10x10_Pitch0.4mm" H 4950 4950 50  0001 C CNN
-F 3 "" H 4950 4950 50  0001 C CNN
-	1    7050 3250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1064,14 +1054,6 @@ Wire Wire Line
 Connection ~ 10175 1250
 Wire Wire Line
 	10175 1250 10400 1250
-Wire Wire Line
-	9250 3950 9250 4050
-Connection ~ 9250 4050
-Wire Wire Line
-	9250 4050 9250 4150
-Connection ~ 9250 4150
-Wire Wire Line
-	9250 4150 9250 4250
 $Comp
 L business-card-rescue:power_GND-business-card-cache #PWR0125
 U 1 1 5FC47009
@@ -1083,7 +1065,6 @@ F 3 "" H 9250 4250 50  0001 C CNN
 	1    9250 4250
 	0    -1   -1   0   
 $EndComp
-Connection ~ 9250 4250
 $Comp
 L business-card-rescue:power_GND-business-card-cache #PWR0126
 U 1 1 5FC47320
@@ -1106,15 +1087,6 @@ F 3 "" H 9250 5150 50  0001 C CNN
 	1    9250 5150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	9250 4850 9250 4950
-Connection ~ 9250 5150
-Connection ~ 9250 4950
-Wire Wire Line
-	9250 4950 9250 5050
-Connection ~ 9250 5050
-Wire Wire Line
-	9250 5050 9250 5150
 Wire Wire Line
 	4950 5050 4650 5050
 Wire Wire Line
@@ -1297,10 +1269,104 @@ F 3 " ~" H 2650 6650 50  0001 C CNN
 	1    2500 6700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9250 2750
-NoConn ~ 9250 2850
-NoConn ~ 9250 3050
-NoConn ~ 9250 3150
-NoConn ~ 9250 3350
-NoConn ~ 9250 3550
+$Comp
+L Connector_Generic:Conn_02x04_Counter_Clockwise J2
+U 1 1 5FC55B49
+P 1150 6550
+F 0 "J2" H 1200 6867 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 1200 6776 50  0000 C CNN
+F 2 "footprints:SOIC_clipProgSmall" H 1150 6550 50  0001 C CNN
+F 3 "~" H 1150 6550 50  0001 C CNN
+	1    1150 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 4150 9250 4250
+Connection ~ 9250 4150
+Connection ~ 9250 4250
+Wire Wire Line
+	9250 4050 9250 4150
+Wire Wire Line
+	9250 3950 9250 4050
+Connection ~ 9250 4050
+Wire Wire Line
+	9250 4850 9250 4950
+Connection ~ 9250 4950
+Wire Wire Line
+	9250 5050 9250 5150
+Wire Wire Line
+	9250 4950 9250 5050
+Connection ~ 9250 5050
+Connection ~ 9250 5150
+$Comp
+L business-card-rescue:F1C100s-3340_kicad-business-card-rescue U7
+U 1 1 5FC1F3CA
+P 7050 3250
+F 0 "U7" H 7100 5415 50  0000 C CNN
+F 1 "F1C100s" H 7100 5324 50  0000 C CNN
+F 2 "footprints:QFN-88_EP_10x10_Pitch0.4mm" H 4950 4950 50  0001 C CNN
+F 3 "" H 4950 4950 50  0001 C CNN
+	1    7050 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 3050 9450 3050
+Wire Wire Line
+	9250 3150 9450 3150
+Wire Wire Line
+	9250 3350 9450 3350
+Wire Wire Line
+	9250 3550 9450 3550
+Text Label 9450 3050 0    50   ~ 0
+JTAG_TMS
+Text Label 9450 3150 0    50   ~ 0
+JTAG_TDI
+Text Label 9450 3350 0    50   ~ 0
+JTAG_TMS
+Text Label 9450 3550 0    50   ~ 0
+JTAG_TCK
+Text Label 9250 2750 0    50   ~ 0
+SCL
+Text Label 9250 2850 0    50   ~ 0
+SDA
+Wire Wire Line
+	1450 6450 1550 6450
+Wire Wire Line
+	1450 6550 1550 6550
+Wire Wire Line
+	1450 6650 1550 6650
+Wire Wire Line
+	1450 6750 1550 6750
+Wire Wire Line
+	950  6450 850  6450
+Wire Wire Line
+	950  6550 850  6550
+Wire Wire Line
+	950  6650 850  6650
+Wire Wire Line
+	950  6750 850  6750
+Text Label 1550 6450 0    50   ~ 0
+SDA
+Text Label 1550 6550 0    50   ~ 0
+JTAG_TDI
+Text Label 1550 6650 0    50   ~ 0
+JTAG_TCK
+Text Label 850  6450 2    50   ~ 0
+SCL
+Text Label 850  6550 2    50   ~ 0
+JTAG_TMS
+Text Label 850  6650 2    50   ~ 0
+JTAG_TDO
+NoConn ~ 850  6750
+$Comp
+L power:GND #PWR?
+U 1 1 5FC8A829
+P 1550 6750
+F 0 "#PWR?" H 1550 6500 50  0001 C CNN
+F 1 "GND" H 1555 6577 50  0000 C CNN
+F 2 "" H 1550 6750 50  0001 C CNN
+F 3 "" H 1550 6750 50  0001 C CNN
+	1    1550 6750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
