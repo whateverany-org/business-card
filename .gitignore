@@ -25,4 +25,7 @@ fp-info-cache
 *.xml
 *.csv
 
-logs
+logs/
+gerber.zip
+java.out
+.DS_Store
