@@ -1,0 +1,53 @@
+% !TEX TS-program = xelatex
+\documentclass[10pt,oneside,final]{article}
+
+% set all margins to 0 and set business card size
+\usepackage[paperwidth=90mm,paperheight=50mm,margin=5mm,noheadfoot]{geometry}
+\setlength{\baselineskip}{0cm}
+\setlength{\topskip}{0pt}
+
+\usepackage{parskip}         % remove paragraph indents
+\usepackage{fontspec}        % load external fonts
+\usepackage{fontawesome}     % icon font
+\usepackage{multirow}
+\usepackage[nolinks]{qrcode} % create QR codes
+
+\makeatletter
+\setlength{\@fptop}{10pt}
+\makeatother
+
+
+\newlength{\seplinewidth}    \setlength{\seplinewidth}{1pt}
+\newlength{\seplineheight}   \setlength{\seplineheight}{1pt}
+\newlength{\seplinedistance} \setlength{\seplinedistance}{1pt}
+
+\newlength{\qrheight}  \setlength{\qrheight}{25mm}
+
+\newcommand*\wc{{{} \bullet {}}}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\begin{document}
+  \thispagestyle{empty}
+  \begin{center}
+  
+  \begin{table}[]
+\begin{tabular}{cc}
+\multirow{4}{*}{
+\qrcode[level=T,height=\qrheight]{BEGIN:VCARD
+VERSION:3.0
+N:Darcy;Sheehan;;
+FN:Darcy Sheehan
+TEL;TYPE=MOBILE:+61 401 581 595
+EMAIL:maker@whateverany.com
+URL:https://www.whateverany.com
+REV:2038-01-19T03:13:59Z
+END:VCARD}
+} & \huge{\textbf {Darcy Sheehan}} \\
+  & \normalfont{maker@whateverany.com  } \\
+  & \tiny{+61-401-581-595} \\
+  & \tiny{This card is a USB powered Linux SBC}
+             
+\end{tabular}
+\end{table}
+  \end{center}
+\end{document}

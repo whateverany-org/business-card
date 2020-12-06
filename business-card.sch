@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:business-card-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,7 +19,7 @@ U 1 1 5FC1D2EB
 P 1650 750
 F 0 "F1" V 1500 500 50  0000 C CNN
 F 1 "Polyfuse" V 1500 750 50  0000 C CNN
-F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" H 1700 550 50  0001 L CNN
+F 2 "Fuse:Fuse_0805_2012Metric" H 1700 550 50  0001 L CNN
 F 3 "~" H 1650 750 50  0001 C CNN
 F 4 "R" H 1650 750 50  0001 C CNN "Spice_Primitive"
 F 5 "0" H 1650 750 50  0001 C CNN "Spice_Model"
@@ -556,7 +555,7 @@ U 1 1 5FC41FCB
 P 1250 4700
 F 0 "C7" V 1250 4050 50  0000 C CNN
 F 1 "2u2" V 1250 4250 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1250 4700 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1250 4700 50  0001 C CNN
 F 3 "~" H 1250 4700 50  0001 C CNN
 	1    1250 4700
 	0    1    1    0   
@@ -1269,17 +1268,6 @@ F 3 " ~" H 2650 6650 50  0001 C CNN
 	1    2500 6700
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x04_Counter_Clockwise J2
-U 1 1 5FC55B49
-P 1150 6550
-F 0 "J2" H 1200 6867 50  0000 C CNN
-F 1 "Conn_02x04_Counter_Clockwise" H 1200 6776 50  0000 C CNN
-F 2 "footprints:SOIC_clipProgSmall" H 1150 6550 50  0001 C CNN
-F 3 "~" H 1150 6550 50  0001 C CNN
-	1    1150 6550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9250 4150 9250 4250
 Connection ~ 9250 4150
@@ -1309,64 +1297,10 @@ F 3 "" H 4950 4950 50  0001 C CNN
 	1    7050 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 3050 9450 3050
-Wire Wire Line
-	9250 3150 9450 3150
-Wire Wire Line
-	9250 3350 9450 3350
-Wire Wire Line
-	9250 3550 9450 3550
-Text Label 9450 3050 0    50   ~ 0
-JTAG_TMS
-Text Label 9450 3150 0    50   ~ 0
-JTAG_TDI
-Text Label 9450 3350 0    50   ~ 0
-JTAG_TMS
-Text Label 9450 3550 0    50   ~ 0
-JTAG_TCK
-Text Label 9250 2750 0    50   ~ 0
-SCL
-Text Label 9250 2850 0    50   ~ 0
-SDA
-Wire Wire Line
-	1450 6450 1550 6450
-Wire Wire Line
-	1450 6550 1550 6550
-Wire Wire Line
-	1450 6650 1550 6650
-Wire Wire Line
-	1450 6750 1550 6750
-Wire Wire Line
-	950  6450 850  6450
-Wire Wire Line
-	950  6550 850  6550
-Wire Wire Line
-	950  6650 850  6650
-Wire Wire Line
-	950  6750 850  6750
-Text Label 1550 6450 0    50   ~ 0
-SDA
-Text Label 1550 6550 0    50   ~ 0
-JTAG_TDI
-Text Label 1550 6650 0    50   ~ 0
-JTAG_TCK
-Text Label 850  6450 2    50   ~ 0
-SCL
-Text Label 850  6550 2    50   ~ 0
-JTAG_TMS
-Text Label 850  6650 2    50   ~ 0
-JTAG_TDO
-NoConn ~ 850  6750
-$Comp
-L power:GND #PWR?
-U 1 1 5FC8A829
-P 1550 6750
-F 0 "#PWR?" H 1550 6500 50  0001 C CNN
-F 1 "GND" H 1555 6577 50  0000 C CNN
-F 2 "" H 1550 6750 50  0001 C CNN
-F 3 "" H 1550 6750 50  0001 C CNN
-	1    1550 6750
-	1    0    0    -1  
-$EndComp
+NoConn ~ 9250 3050
+NoConn ~ 9250 3150
+NoConn ~ 9250 3350
+NoConn ~ 9250 3550
+NoConn ~ 9250 2750
+NoConn ~ 9250 2850
 $EndSCHEMATC

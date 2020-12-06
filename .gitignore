@@ -29,3 +29,7 @@ logs/
 gerber.zip
 java.out
 .DS_Store
+test/
+latex/*.log
+latex/*.aux
+gerber/*
