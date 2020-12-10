@@ -1,0 +1,4 @@
+
+(fp_lib_table
+  (lib (name "copyleft")(type KiCad)(uri "$(KIPRJMOD)/copyleft.pretty")(options "")(descr ""))
+)

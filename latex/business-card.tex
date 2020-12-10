@@ -1,0 +1,73 @@
+% !TEX TS-program = xelatex
+\documentclass[10pt,oneside,final]{article}
+
+% set all margins to 0 and set business card size
+\usepackage[paperwidth=90mm,paperheight=23mm,margin=0mm,noheadfoot]{geometry}
+\setlength{\baselineskip}{0cm}
+\setlength{\topskip}{0pt}
+
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{parskip}         % remove paragraph indents
+\usepackage{fontspec}        % load external fonts
+\usepackage{fontawesome}     % icon font
+\usepackage[nolinks]{qrcode} % create QR codes
+\usepackage{multicol}
+\usepackage{framed}
+
+
+\makeatletter
+\setlength{\@fptop}{10pt}
+\makeatother
+
+\newlength{\seplinewidth}    \setlength{\seplinewidth}{1pt}
+\newlength{\seplineheight}   \setlength{\seplineheight}{1pt}
+\newlength{\seplinedistance} \setlength{\seplinedistance}{1pt}
+
+\newlength{\qrheight}  \setlength{\qrheight}{18mm}
+
+\newlength{\qrwidth}  \setlength{\qrwidth}{18mm}
+
+\newlength{\parwidth}  \setlength{\parwidth}{65mm}
+
+\renewcommand{\familydefault}{\sfdefault} 
+
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{white}}
+
+
+\begin{document}
+  \thispagestyle{empty}
+\noindent\colorbox{black}{\begin{minipage}[t]{1\paperwidth}%
+%
+
+
+\fbox{
+\parbox{\qrwidth}{\qrcode[level=T,height=\qrheight]{BEGIN:VCARD
+VERSION:4.0
+N:Sheehan;Darcy
+TEL;TYPE=work:+61-401-581-595
+EMAIL:maker@whateverany.com
+URL:https://www.whateverany.com
+END:VCARD}
+}
+\parbox {\parwidth}{\Huge{Darcy Sheehan} \\
+\vspace{0.1mm} \\
+\centerline{\tiny{maker@whateverany.com}} \\
+\centerline{\tiny{+61-401-581-595}}\\
+\vspace{0.1mm} \\
+\tiny{This maker project runs Linux!} \\
+
+}}
+
+\end{minipage}}
+
+\end{document}
+

@@ -24,3 +24,13 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+logs/
+gerber.zip
+java.out
+.DS_Store
+test/
+latex/*.log
+latex/*.aux
+gerber/*
+.svg2shenzhen-cache
