@@ -33,3 +33,4 @@ test/
 latex/*.log
 latex/*.aux
 gerber/*
+.svg2shenzhen-cache
