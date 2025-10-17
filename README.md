@@ -1,5 +1,5 @@
 # business-card
-My first ever PCB, a clone of https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux. Completely untested, so not sure if it works or not. Build is waiting on on development of my reflow oven https://github.com/whateverany-iot/reflow-oven.
+My first ever PCB, a clone of https://www.thirtythreeforty.net/posts/2019/12/my-business-card-runs-linux. Completely untested, so not sure if it works or not. Build is waiting on on development of my reflow oven https://github.com/whateverany-org/reflow-oven.
 
 # pcbdraw
 
