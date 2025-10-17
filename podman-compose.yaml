@@ -1,0 +1,15 @@
+---
+name: devops
+services:
+  bcpy:
+    build:
+      context: common/oci/bcpy
+      tags:
+        - localhost/whateverany/bcpy:latest
+        - ${OCI_IMAGE_BUSYBOX}
+    volumes:
+      - ${MAIN_BASE_DIR:-.}:${OCI_WORKING_DIR:-/a}:U
+      - ${HOME}/.config/kicad/6.0:/home/kicad/.config/kicad/8.0:ro,U
+      - ${HOME}/.local/share/kicad/6.0:/home/kicad/.local/share/kicad/8.0:ro,U
+      - ${HOME}/.cache/kicad/6.0:/home/kicad/.cache/kicad/8.0:U
+    working_dir: ${OCI_WORKING_DIR:-/a}

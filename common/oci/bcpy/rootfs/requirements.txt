@@ -1,0 +1,3 @@
+git+https://github.com/yaqwsx/pcbdraw.git
+pcbdraw==1.1.2
+mistune~=2.0.4
